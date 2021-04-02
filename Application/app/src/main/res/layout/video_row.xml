@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:padding="8dp">
+
+	<RelativeLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/imageListLayout">
+
+		<ImageView
+			android:layout_width="140dp"
+			android:layout_height="70dp"
+			android:id="@+id/videoListThumbnail"
+			android:layout_alignParentLeft="true"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/videoListDuration"
+			android:layout_alignLeft="@+id/videoListThumbnail"
+			android:layout_alignTop="@+id/videoListThumbnail"
+			android:layout_alignRight="@+id/videoListThumbnail"
+			android:layout_alignBottom="@+id/videoListThumbnail"
+			android:gravity="bottom|right"
+			android:layout_marginRight="10dp"
+			android:textColor="#fff"
+			android:textSize="10sp"/>
+
+	</RelativeLayout>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_toEndOf="@+id/imageListLayout"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:textStyle="bold"
+		android:ellipsize="end"
+		android:lines="2"
+		android:textSize="14sp"
+		android:id="@+id/videoListName"
+		android:text="Title"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/videoListUploaderName"
+		android:layout_below="@+id/videoListName"
+		android:layout_alignLeft="@+id/videoListName"
+		android:layout_alignStart="@+id/videoListName"
+		android:lines="1"
+		android:ellipsize="end"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/videoListPublishedAt"
+		android:layout_alignBottom="@+id/imageListLayout"
+		android:layout_alignStart="@+id/videoListUploaderName"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/videoListViews"
+		android:layout_marginLeft="5dp"
+		android:layout_alignTop="@+id/videoListPublishedAt"
+		android:layout_toEndOf="@+id/videoListPublishedAt"/>
+
+</RelativeLayout>
+
